@@ -4,7 +4,7 @@ body {
 
 /* HEADER */
 header {
-  align-items: center;
+  align-items: flex-end;
   background-color: cornflowerblue;
   box-sizing: border-box;
   color: blanchedalmond;
@@ -22,7 +22,6 @@ h1 {
 }
 
 .welcome {
-  align-self: flex-end;
   margin: 0;
 }
 
@@ -31,7 +30,7 @@ main {
   background-color: blanchedalmond;
   box-sizing: border-box;
   display: flex;
-  height: 85vh;
+  height: 100%;
   padding: 3% 10% 0 10%;
   width: 100vw;
 }
@@ -83,19 +82,87 @@ width: 33%;
   display: inline;
 }
 
+#my-saved-recipes {
+  box-sizing: border-box;
+  padding: 3%
+}
+
+#my-saved-recipes p {
+  text-align: center;
+}
+
 /* ALL RECIPES */
 .all-recipes {
   background-color: darkslategrey;
   box-sizing: border-box;
   display: flex;
+  /* position: absolute; */
   flex-direction: column;
   height: 100%;
   padding: 2% 2% 0 2%;
 }
 
-/* .tags-menu {
+.all-recipes-display {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-column-gap: 2%;
+  justify-content: space-around;
+  margin-top: 1%;
+}
+
+.recipe-card {
+  border: 2px solid red;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+  padding: 0 3% 3%;
+  width: 100%;
+}
+
+.recipe-card-header {
+  align-content: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+
+.recipe-card-header p {
+  margin: 0;
+}
+
+.card-btns {
   align-self: flex-end;
+}
+
+.card-btns button {
+  width: 5%
+}
+
+.favorite {
+
+}
+
+.cook-next {
+
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* .recipe-card footer {
+  width: 100%;
+  border-top: 2px solid blue;
+  height: 10%;
+  bottom: 0;
 } */
+
+.tags-menu {
+  align-self: flex-end;
+}
 
 /* DROPDOWN MENU */
 .multiselect {
