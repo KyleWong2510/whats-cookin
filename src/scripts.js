@@ -1,9 +1,10 @@
-console.log('Hello world');
+// console.log('Hello world');
 
 const Recipe = require('./Recipe');
 
 
 let allRecipesDisplay = document.querySelector('.all-recipes-display');
+let recipeSection = document.querySelector('.all-recipes');
 let recipeNames = [];
 
 
@@ -11,7 +12,6 @@ window.onload = function() {
   addRecipesToDOM();
   generateRandomUser();
 }
-
 
 recipeSection.addEventListener('click', addRecipesToDOM);
 
@@ -59,6 +59,13 @@ function addRecipesToDOM() {
     console.log(user);
   }
 
+  function generateRandomUser() {
+    let randomIndex = Math.floor(Math.random() * 50)
+    let newUser = usersData[randomIndex]
+    let user = new User(newUser.name, newUser.id, newUser.pantry);
+    console.log(user);
+  }
+
     // sortedRecipeNames.sort(function(a, b) {
     //   return a.name - b.name
     // });
@@ -81,4 +88,3 @@ function greetUser() {
   //   //value will become an argument, that will make this
   //   //method, search for the name in the saved recipe array
   // }
-
