@@ -5,6 +5,7 @@ const Recipe = require('./Recipe');
 
 let allRecipesDisplay = document.querySelector('.all-recipes-display');
 let recipeSection = document.querySelector('.all-recipes');
+
 let recipeNames = [];
 
 
@@ -37,10 +38,8 @@ function addRecipesToDOM() {
         <p>${recipe.name}</p>
         <div class="card-btns">
           <button id='favorite'>
-            
           </button>
           <button id='cook-next'>
-            
           </button>
         </div>
       </div>  
